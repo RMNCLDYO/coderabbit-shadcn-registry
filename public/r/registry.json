@@ -31,7 +31,7 @@
         "developer-tools"
       ],
       "registryDependencies": [
-        "coderabbit-types"
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-types.json"
       ],
       "files": [
         {
@@ -55,7 +55,7 @@
         "database"
       ],
       "registryDependencies": [
-        "coderabbit-types"
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-types.json"
       ],
       "files": [
         {
@@ -75,8 +75,8 @@
         "browser"
       ],
       "registryDependencies": [
-        "coderabbit-types",
-        "coderabbit-storage-adapter"
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-types.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-storage-adapter.json"
       ],
       "files": [
         {
@@ -101,8 +101,8 @@
         "convex"
       ],
       "registryDependencies": [
-        "coderabbit-types",
-        "coderabbit-storage-adapter"
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-types.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-storage-adapter.json"
       ],
       "files": [
         {
@@ -131,8 +131,8 @@
         "@supabase/supabase-js"
       ],
       "registryDependencies": [
-        "coderabbit-types",
-        "coderabbit-storage-adapter"
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-types.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-storage-adapter.json"
       ],
       "files": [
         {
@@ -159,8 +159,8 @@
         "@types/pg"
       ],
       "registryDependencies": [
-        "coderabbit-types",
-        "coderabbit-storage-adapter"
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-types.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-storage-adapter.json"
       ],
       "files": [
         {
@@ -187,8 +187,8 @@
         "@types/mysql2"
       ],
       "registryDependencies": [
-        "coderabbit-types",
-        "coderabbit-storage-adapter"
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-types.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-storage-adapter.json"
       ],
       "files": [
         {
@@ -212,9 +212,9 @@
         "react"
       ],
       "registryDependencies": [
-        "coderabbit-types",
-        "coderabbit-client",
-        "coderabbit-storage-adapter"
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-types.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-client.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-storage-adapter.json"
       ],
       "files": [
         {
@@ -243,7 +243,7 @@
         "label",
         "select",
         "textarea",
-        "coderabbit-types"
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-types.json"
       ],
       "files": [
         {
@@ -312,13 +312,13 @@
         "label",
         "select",
         "textarea",
-        "coderabbit-types",
-        "coderabbit-client",
-        "coderabbit-storage-adapter",
-        "coderabbit-storage-localstorage",
-        "coderabbit-react",
-        "coderabbit-form",
-        "coderabbit-branding"
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-types.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-client.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-storage-adapter.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-storage-localstorage.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-react.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-form.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-branding.json"
       ],
       "envVars": {
         "CODERABBIT_API_KEY": ""
@@ -347,13 +347,13 @@
         "label",
         "select",
         "textarea",
-        "coderabbit-types",
-        "coderabbit-client",
-        "coderabbit-storage-adapter",
-        "coderabbit-storage-convex",
-        "coderabbit-react",
-        "coderabbit-form",
-        "coderabbit-branding"
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-types.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-client.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-storage-adapter.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-storage-convex.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-react.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-form.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-branding.json"
       ],
       "envVars": {
         "CODERABBIT_API_KEY": "",
@@ -384,13 +384,13 @@
         "label",
         "select",
         "textarea",
-        "coderabbit-types",
-        "coderabbit-client",
-        "coderabbit-storage-adapter",
-        "coderabbit-storage-supabase",
-        "coderabbit-react",
-        "coderabbit-form",
-        "coderabbit-branding"
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-types.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-client.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-storage-adapter.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-storage-supabase.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-react.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-form.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-branding.json"
       ],
       "envVars": {
         "CODERABBIT_API_KEY": "",
@@ -423,13 +423,13 @@
         "label",
         "select",
         "textarea",
-        "coderabbit-types",
-        "coderabbit-client",
-        "coderabbit-storage-adapter",
-        "coderabbit-storage-postgres",
-        "coderabbit-react",
-        "coderabbit-form",
-        "coderabbit-branding"
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-types.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-client.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-storage-adapter.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-storage-postgres.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-react.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-form.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-branding.json"
       ],
       "envVars": {
         "CODERABBIT_API_KEY": "",
@@ -465,13 +465,13 @@
         "label",
         "select",
         "textarea",
-        "coderabbit-types",
-        "coderabbit-client",
-        "coderabbit-storage-adapter",
-        "coderabbit-storage-mysql",
-        "coderabbit-react",
-        "coderabbit-form",
-        "coderabbit-branding"
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-types.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-client.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-storage-adapter.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-storage-mysql.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-react.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-form.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-branding.json"
       ],
       "envVars": {
         "CODERABBIT_API_KEY": "",

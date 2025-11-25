@@ -13,8 +13,24 @@ const path = require('path');
 
 const OUTPUT_DIR = 'public/r';
 const BUNDLES_DIR = 'registry/bundles';
+const REGISTRY_BASE_URL =
+  'https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r';
 
 console.log('📦 Building backend bundle registries...\n');
+
+/**
+ * Transform registryDependencies to use full URLs for custom items
+ * shadcn/ui items (button, input, etc.) stay as names
+ * coderabbit-* items get full URLs
+ */
+function transformRegistryDependencies(deps) {
+  return deps.map((dep) => {
+    if (dep.startsWith('coderabbit-')) {
+      return `${REGISTRY_BASE_URL}/${dep}.json`;
+    }
+    return dep;
+  });
+}
 
 /**
  * Bundle configurations for each backend
@@ -214,12 +230,15 @@ function ensureDir(dir) {
 }
 
 /**
- * Generate bundle JSON file
+ * Generate bundle JSON file with transformed registryDependencies
  */
 function generateBundleJSON(bundleConfig) {
   return {
     $schema: 'https://ui.shadcn.com/schema/registry-item.json',
     ...bundleConfig,
+    registryDependencies: transformRegistryDependencies(
+      bundleConfig.registryDependencies
+    ),
   };
 }
 
@@ -227,11 +246,18 @@ function generateBundleJSON(bundleConfig) {
  * Create bundle registry.json for each backend
  */
 function createBundleRegistry(backend, items) {
+  const transformedItems = items.map((item) => ({
+    ...item,
+    registryDependencies: transformRegistryDependencies(
+      item.registryDependencies
+    ),
+  }));
+
   const registry = {
     $schema: 'https://ui.shadcn.com/schema/registry.json',
     name: 'coderabbit',
     homepage: 'https://github.com/RMNCLDYO/coderabbit-shadcn-registry',
-    items: items,
+    items: transformedItems,
   };
 
   return registry;

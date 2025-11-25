@@ -10,7 +10,7 @@
     "database"
   ],
   "registryDependencies": [
-    "coderabbit-types"
+    "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-types.json"
   ],
   "files": [
     {

@@ -16,8 +16,25 @@ const path = require('path');
 const REGISTRY_FILE = 'registry.json';
 const OUTPUT_DIR = 'public/r';
 const SOURCE_DIR = 'registry';
+const REGISTRY_BASE_URL =
+  'https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r';
 
 console.log('🚀 Building flat registry (registry index compatible)...\n');
+
+/**
+ * Transform registryDependencies to use full URLs for custom items
+ * shadcn/ui items (button, input, etc.) stay as names
+ * coderabbit-* items get full URLs
+ */
+function transformRegistryDependencies(deps) {
+  if (!deps || !Array.isArray(deps)) return deps;
+  return deps.map((dep) => {
+    if (dep.startsWith('coderabbit-')) {
+      return `${REGISTRY_BASE_URL}/${dep}.json`;
+    }
+    return dep;
+  });
+}
 
 /**
  * Read and parse registry.json
@@ -51,6 +68,7 @@ function copyFile(src, dest) {
 
 /**
  * Generate registry item JSON without content property
+ * and with transformed registryDependencies
  */
 function generateItemJSON(item) {
   // Create a clean copy of the item
@@ -59,9 +77,16 @@ function generateItemJSON(item) {
     ...item,
   };
 
+  // Transform registryDependencies to full URLs for custom items
+  if (cleanItem.registryDependencies) {
+    cleanItem.registryDependencies = transformRegistryDependencies(
+      cleanItem.registryDependencies
+    );
+  }
+
   // If files exist, remove content property from each file
   if (cleanItem.files && Array.isArray(cleanItem.files)) {
-    cleanItem.files = cleanItem.files.map(file => {
+    cleanItem.files = cleanItem.files.map((file) => {
       const { content, ...fileWithoutContent } = file;
       return fileWithoutContent;
     });
@@ -150,11 +175,20 @@ function buildFlatRegistry() {
     console.log();
   }
 
-  // Generate main registry.json in output directory
+  // Generate main registry.json in output directory with transformed deps
+  const transformedRegistry = {
+    ...registry,
+    items: registry.items.map((item) => ({
+      ...item,
+      registryDependencies: transformRegistryDependencies(
+        item.registryDependencies
+      ),
+    })),
+  };
   const mainRegistryPath = path.join(OUTPUT_DIR, 'registry.json');
   fs.writeFileSync(
     mainRegistryPath,
-    JSON.stringify(registry, null, 2),
+    JSON.stringify(transformedRegistry, null, 2),
     'utf-8'
   );
 
