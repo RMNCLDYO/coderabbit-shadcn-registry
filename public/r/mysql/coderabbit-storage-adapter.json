@@ -5,7 +5,7 @@
   "title": "CodeRabbit Storage Adapter Interface",
   "description": "TypeScript interface for implementing custom storage backends. Implement this to add support for any database: Convex, Supabase, Prisma, PostgreSQL, MySQL, MongoDB, localStorage, IndexedDB, or in-memory storage.",
   "registryDependencies": [
-    "coderabbit-types"
+    "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-types.json"
   ],
   "files": [
     {

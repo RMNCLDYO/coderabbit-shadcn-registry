@@ -9,11 +9,11 @@
     "convex"
   ],
   "registryDependencies": [
-    "coderabbit-types",
-    "coderabbit-client",
-    "coderabbit-storage-adapter",
-    "coderabbit-storage-convex",
-    "coderabbit-react"
+    "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-types.json",
+    "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-client.json",
+    "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-storage-adapter.json",
+    "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-storage-convex.json",
+    "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-react.json"
   ],
   "envVars": {
     "CODERABBIT_API_KEY": ""

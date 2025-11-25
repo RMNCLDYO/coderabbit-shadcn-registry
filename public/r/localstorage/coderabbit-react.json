@@ -8,9 +8,9 @@
     "react"
   ],
   "registryDependencies": [
-    "coderabbit-types",
-    "coderabbit-client",
-    "coderabbit-storage-adapter"
+    "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-types.json",
+    "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-client.json",
+    "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-storage-adapter.json"
   ],
   "files": [
     {

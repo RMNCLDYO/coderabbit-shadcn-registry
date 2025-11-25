@@ -1,14 +1,10 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "coderabbit-postgres",
-  "author": "Ray <hi@rmncldyo.com>",
   "type": "registry:block",
   "title": "CodeRabbit with PostgreSQL",
+  "author": "Ray <hi@rmncldyo.com>",
   "description": "Complete CodeRabbit integration with PostgreSQL. Works with Neon, Vercel Postgres, Railway, AWS RDS, etc.",
-  "categories": [
-    "complete",
-    "database"
-  ],
   "dependencies": [
     "react",
     "lucide-react",
@@ -39,5 +35,9 @@
     "POSTGRES_USER": "",
     "POSTGRES_PASSWORD": ""
   },
-  "docs": "Get CODERABBIT_API_KEY from https://app.coderabbit.ai/settings/api-keys (requires Pro plan). Run the SQL schema from storage-postgres.ts."
+  "docs": "Get CODERABBIT_API_KEY from https://app.coderabbit.ai/settings/api-keys (requires Pro plan). Run the SQL schema from storage-postgres.ts.",
+  "categories": [
+    "complete",
+    "database"
+  ]
 }

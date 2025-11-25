@@ -5,8 +5,8 @@
   "title": "CodeRabbit LocalStorage Adapter",
   "description": "Browser localStorage adapter for client-side report persistence. Perfect for testing, prototyping, and browser-based applications. Reports persist across page reloads.",
   "registryDependencies": [
-    "coderabbit-types",
-    "coderabbit-storage-adapter"
+    "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-types.json",
+    "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-storage-adapter.json"
   ],
   "files": [
     {

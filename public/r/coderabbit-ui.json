@@ -14,9 +14,9 @@
     "label",
     "select",
     "textarea",
-    "coderabbit-types",
-    "coderabbit-form",
-    "coderabbit-branding"
+    "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-types.json",
+    "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-form.json",
+    "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-branding.json"
   ],
   "categories": [
     "components",
