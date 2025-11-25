@@ -16,25 +16,39 @@ import type {
  * LocalStorage storage adapter
  * Persists reports in browser localStorage
  * Perfect for client-side apps and testing
+ *
+ * Note: This adapter is safe to instantiate during SSR but methods
+ * will throw if called server-side. Use with useEffect or ensure
+ * client-side only rendering.
  */
 export class LocalStorageAdapter implements ReportStorageAdapter {
   private key: string
 
   constructor(key = 'coderabbit:reports') {
     this.key = key
+  }
 
-    // Check if localStorage is available
+  /**
+   * Ensure we're running in browser context
+   * @throws Error if localStorage is not available
+   */
+  private ensureBrowser(): void {
     if (typeof window === 'undefined' || !window.localStorage) {
-      throw new Error('localStorage is not available in this environment')
+      throw new Error(
+        'localStorage is not available in this environment. ' +
+          'Ensure this adapter is only used on the client side (e.g., inside useEffect).'
+      )
     }
   }
 
   private getReports(): StoredReport[] {
+    this.ensureBrowser()
     const data = localStorage.getItem(this.key)
     return data ? JSON.parse(data) : []
   }
 
   private saveReports(reports: StoredReport[]): void {
+    this.ensureBrowser()
     localStorage.setItem(this.key, JSON.stringify(reports))
   }
 
@@ -126,6 +140,7 @@ export class LocalStorageAdapter implements ReportStorageAdapter {
    * Clear all reports (useful for testing)
    */
   clear(): void {
+    this.ensureBrowser()
     localStorage.removeItem(this.key)
   }
 }
