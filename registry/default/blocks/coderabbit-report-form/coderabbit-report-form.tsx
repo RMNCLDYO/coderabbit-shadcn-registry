@@ -16,7 +16,7 @@ import type {
   FilterParameter,
   FilterOperator,
   GroupBy,
-} from '@/registry/default/coderabbit/lib/types'
+} from '@/registry/default/lib/types'
 
 const PROMPT_TEMPLATES = [
   'Select template',

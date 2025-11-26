@@ -5,11 +5,11 @@
  * Handles API calls server-side where CODERABBIT_API_KEY is available
  */
 
-import { createCodeRabbitClient } from '@/registry/default/coderabbit/lib/client'
+import { createCodeRabbitClient } from '@/registry/default/lib/client'
 import type {
   ReportGenerateRequest,
   ReportResult,
-} from '@/registry/default/coderabbit/lib/types'
+} from '@/registry/default/lib/types'
 
 /**
  * Check if CodeRabbit API is configured (server-side)

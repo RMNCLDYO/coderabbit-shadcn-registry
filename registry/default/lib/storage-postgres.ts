@@ -1,12 +1,12 @@
 import type {
   ReportStorageAdapter,
   ListReportsResponse,
-} from '@/registry/default/coderabbit/lib/storage-adapter'
+} from '@/registry/default/lib/storage-adapter'
 import type {
   StoredReport,
   ReportStatus,
   ReportResult,
-} from '@/registry/default/coderabbit/lib/types'
+} from '@/registry/default/lib/types'
 import type { Pool, PoolClient } from 'pg'
 
 export interface PostgresStorageConfig {
@@ -20,7 +20,7 @@ export interface PostgresStorageConfig {
  * @example
  * ```typescript
  * import { Pool } from 'pg'
- * import { PostgresStorageAdapter } from '@/registry/default/coderabbit/lib/storage-postgres'
+ * import { PostgresStorageAdapter } from '@/registry/default/lib/storage-postgres'
  *
  * const pool = new Pool({
  *   host: process.env.POSTGRES_HOST,
