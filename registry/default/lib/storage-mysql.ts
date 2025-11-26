@@ -1,12 +1,12 @@
 import type {
   ReportStorageAdapter,
   ListReportsResponse,
-} from '@/registry/default/coderabbit/lib/storage-adapter'
+} from '@/registry/default/lib/storage-adapter'
 import type {
   StoredReport,
   ReportStatus,
   ReportResult,
-} from '@/registry/default/coderabbit/lib/types'
+} from '@/registry/default/lib/types'
 import type { Pool, PoolConnection } from 'mysql2/promise'
 
 export interface MySQLStorageConfig {
@@ -20,7 +20,7 @@ export interface MySQLStorageConfig {
  * @example
  * ```typescript
  * import mysql from 'mysql2/promise'
- * import { MySQLStorageAdapter } from '@/registry/default/coderabbit/lib/storage-mysql'
+ * import { MySQLStorageAdapter } from '@/registry/default/lib/storage-mysql'
  *
  * const pool = mysql.createPool({
  *   host: process.env.MYSQL_HOST,

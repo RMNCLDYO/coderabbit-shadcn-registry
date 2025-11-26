@@ -1,14 +1,14 @@
 import { useState, useCallback, useEffect } from 'react'
-import { createCodeRabbitClient } from '@/registry/default/coderabbit/lib/client'
+import { createCodeRabbitClient } from '@/registry/default/lib/client'
 import {
   checkCodeRabbitConfig,
   generateReportAction,
-} from '@/registry/default/coderabbit/lib/actions'
+} from '@/registry/default/lib/actions'
 import type {
   ReportGenerateRequest,
   ReportResult,
-} from '@/registry/default/coderabbit/lib/types'
-import type { ReportStorageAdapter } from '@/registry/default/coderabbit/lib/storage-adapter'
+} from '@/registry/default/lib/types'
+import type { ReportStorageAdapter } from '@/registry/default/lib/storage-adapter'
 
 export interface UseCodeRabbitOptions {
   apiKey?: string

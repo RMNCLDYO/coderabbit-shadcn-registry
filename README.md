@@ -98,7 +98,7 @@ npx shadcn@latest add https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shad
 ### Direct API Call
 
 ```typescript
-import { createCodeRabbitClient } from "@/registry/default/coderabbit/lib/client";
+import { createCodeRabbitClient } from "@/registry/default/lib/client";
 
 const client = createCodeRabbitClient();
 const results = await client.generateReport({
@@ -111,8 +111,8 @@ const results = await client.generateReport({
 ### With React Hook
 
 ```typescript
-import { useCodeRabbit } from "@/registry/default/coderabbit/hooks/use-coderabbit";
-import { LocalStorageAdapter } from "@/registry/default/coderabbit/lib/storage-localstorage";
+import { useCodeRabbit } from "@/registry/default/hooks/use-coderabbit";
+import { LocalStorageAdapter } from "@/registry/default/lib/storage-localstorage";
 
 function MyComponent() {
   const { generateReport, isGenerating, error } = useCodeRabbit({
@@ -153,8 +153,8 @@ export default defineSchema({
 **Component:**
 
 ```typescript
-import { useCodeRabbit } from "@/registry/default/coderabbit/hooks/use-coderabbit";
-import { ConvexStorageAdapter } from "@/registry/default/coderabbit/lib/storage-convex";
+import { useCodeRabbit } from "@/registry/default/hooks/use-coderabbit";
+import { ConvexStorageAdapter } from "@/registry/default/lib/storage-convex";
 import { useConvex } from "convex/react";
 import { api } from "@/convex/_generated/api";
 
@@ -173,8 +173,8 @@ function MyComponent() {
 
 ```typescript
 import { createClient } from "@supabase/supabase-js";
-import { useCodeRabbit } from "@/registry/default/coderabbit/hooks/use-coderabbit";
-import { SupabaseStorageAdapter } from "@/registry/default/coderabbit/lib/storage-supabase";
+import { useCodeRabbit } from "@/registry/default/hooks/use-coderabbit";
+import { SupabaseStorageAdapter } from "@/registry/default/lib/storage-supabase";
 
 const supabase = createClient(
   process.env.SUPABASE_URL!,
@@ -195,8 +195,8 @@ function MyComponent() {
 
 ```typescript
 import { Pool } from "pg";
-import { useCodeRabbit } from "@/registry/default/coderabbit/hooks/use-coderabbit";
-import { PostgresStorageAdapter } from "@/registry/default/coderabbit/lib/storage-postgres";
+import { useCodeRabbit } from "@/registry/default/hooks/use-coderabbit";
+import { PostgresStorageAdapter } from "@/registry/default/lib/storage-postgres";
 
 const pool = new Pool({
   host: process.env.POSTGRES_HOST,
@@ -220,8 +220,8 @@ function MyComponent() {
 
 ```typescript
 import mysql from "mysql2/promise";
-import { useCodeRabbit } from "@/registry/default/coderabbit/hooks/use-coderabbit";
-import { MySQLStorageAdapter } from "@/registry/default/coderabbit/lib/storage-mysql";
+import { useCodeRabbit } from "@/registry/default/hooks/use-coderabbit";
+import { MySQLStorageAdapter } from "@/registry/default/lib/storage-mysql";
 
 const pool = mysql.createPool({
   host: process.env.MYSQL_HOST,
@@ -245,7 +245,7 @@ function MyComponent() {
 Implement the `ReportStorageAdapter` interface for any database:
 
 ```typescript
-import type { ReportStorageAdapter } from "@/registry/default/coderabbit/lib/storage-adapter";
+import type { ReportStorageAdapter } from "@/registry/default/lib/storage-adapter";
 
 class MyStorageAdapter implements ReportStorageAdapter {
   async create(data) {

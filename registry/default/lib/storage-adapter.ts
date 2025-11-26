@@ -6,7 +6,7 @@
 import type {
   StoredReport,
   ReportResult,
-} from '@/registry/default/coderabbit/lib/types'
+} from '@/registry/default/lib/types'
 
 /**
  * List reports response with pagination info

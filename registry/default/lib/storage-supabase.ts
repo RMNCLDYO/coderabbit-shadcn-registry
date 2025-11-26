@@ -1,12 +1,12 @@
 import type {
   ReportStorageAdapter,
   ListReportsResponse,
-} from '@/registry/default/coderabbit/lib/storage-adapter'
+} from '@/registry/default/lib/storage-adapter'
 import type {
   StoredReport,
   ReportStatus,
   ReportResult,
-} from '@/registry/default/coderabbit/lib/types'
+} from '@/registry/default/lib/types'
 import type { SupabaseClient } from '@supabase/supabase-js'
 
 export interface SupabaseStorageConfig {
@@ -21,7 +21,7 @@ export interface SupabaseStorageConfig {
  * @example
  * ```typescript
  * import { createClient } from '@supabase/supabase-js'
- * import { SupabaseStorageAdapter } from '@/registry/default/coderabbit/lib/storage-supabase'
+ * import { SupabaseStorageAdapter } from '@/registry/default/lib/storage-supabase'
  *
  * const supabase = createClient(
  *   process.env.SUPABASE_URL!,

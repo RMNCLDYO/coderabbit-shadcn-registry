@@ -6,7 +6,7 @@
 import type {
   ReportGenerateRequest,
   ReportResult,
-} from '@/registry/default/coderabbit/lib/types'
+} from '@/registry/default/lib/types'
 
 const API_BASE_URL = 'https://api.coderabbit.ai/api'
 const API_VERSION = 'v1'

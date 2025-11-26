@@ -6,11 +6,11 @@
 import type {
   ReportStorageAdapter,
   ListReportsResponse,
-} from '@/registry/default/coderabbit/lib/storage-adapter'
+} from '@/registry/default/lib/storage-adapter'
 import type {
   StoredReport,
   ReportResult,
-} from '@/registry/default/coderabbit/lib/types'
+} from '@/registry/default/lib/types'
 
 /**
  * LocalStorage storage adapter
