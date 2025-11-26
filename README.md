@@ -63,7 +63,7 @@ npx shadcn@latest add https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shad
 
 # React
 npx shadcn@latest add https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-react.json
-npx shadcn@latest add https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-form.json
+npx shadcn@latest add https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-report-form.json
 npx shadcn@latest add https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-branding.json
 
 # Storage Adapters
