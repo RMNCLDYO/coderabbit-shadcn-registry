@@ -96,6 +96,70 @@ await generateReport({ from, to, ...payload });
 <CodeRabbitReportCard reports={reports} onDelete={(id) => storage.delete(id)} />
 ```
 
+### Full Example
+
+Complete `page.tsx` with form, generation, and report display:
+
+```tsx
+'use client'
+
+import { useState, useEffect, useMemo, useCallback } from 'react'
+import { useCodeRabbit } from '@/hooks/use-coderabbit'
+import { LocalStorageAdapter } from '@/lib/storage-localstorage'
+import { CodeRabbitReportCard } from '@/components/coderabbit-report-card'
+import {
+  CodeRabbitReportForm,
+  getCodeRabbitReportPayload,
+  getInitialFormData,
+  type CodeRabbitReportFormData,
+} from '@/components/coderabbit-report-form'
+import { Button } from '@/components/ui/button'
+import type { StoredReport } from '@/lib/types'
+
+export default function ReportsPage() {
+  const [reports, setReports] = useState<StoredReport[]>([])
+  const [formData, setFormData] = useState<CodeRabbitReportFormData>(getInitialFormData())
+
+  const storage = useMemo(() => new LocalStorageAdapter(), [])
+  const { generateReport, isGenerating, error } = useCodeRabbit({
+    storage,
+    onSuccess: () => loadReports(),
+  })
+
+  const loadReports = useCallback(async () => {
+    const { reports } = await storage.list()
+    setReports(reports)
+  }, [storage])
+
+  useEffect(() => {
+    loadReports()
+  }, [loadReports])
+
+  return (
+    <div className="max-w-4xl mx-auto p-8 space-y-8">
+      <CodeRabbitReportForm value={formData} onChange={setFormData} />
+
+      {error && <p className="text-red-500">{error}</p>}
+
+      <Button
+        onClick={() => generateReport(getCodeRabbitReportPayload(formData))}
+        disabled={isGenerating}
+      >
+        {isGenerating ? 'Generating...' : 'Generate Report'}
+      </Button>
+
+      <CodeRabbitReportCard
+        reports={reports}
+        onDelete={async (id) => {
+          await storage.delete(id)
+          loadReports()
+        }}
+      />
+    </div>
+  )
+}
+```
+
 ## Custom Storage
 
 ```typescript
