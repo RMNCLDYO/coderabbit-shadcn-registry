@@ -14,7 +14,8 @@
     "button",
     "badge",
     "card",
-    "coderabbit-branding"
+    "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-types.json",
+    "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-branding.json"
   ],
   "files": [
     {

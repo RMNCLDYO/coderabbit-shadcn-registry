@@ -24,7 +24,9 @@
       "title": "CodeRabbit API Client",
       "description": "Framework-agnostic CodeRabbit API client. Works in Node.js, Deno, Bun, Edge runtimes, and browsers. Single endpoint for generating developer activity reports with 10-minute timeout support.",
       "categories": ["api-client", "developer-tools"],
-      "registryDependencies": ["coderabbit-types"],
+      "registryDependencies": [
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-types.json"
+      ],
       "files": [
         {
           "path": "registry/default/lib/client.ts",
@@ -43,7 +45,9 @@
       "title": "CodeRabbit Storage Adapter Interface",
       "description": "TypeScript interface for implementing custom storage backends. Implement this to add support for any database.",
       "categories": ["storage", "database"],
-      "registryDependencies": ["coderabbit-types"],
+      "registryDependencies": [
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-types.json"
+      ],
       "files": [
         {
           "path": "registry/default/lib/storage-adapter.ts",
@@ -58,7 +62,10 @@
       "title": "CodeRabbit LocalStorage Adapter",
       "description": "Browser localStorage adapter for CodeRabbit reports. Perfect for client-side apps and prototyping. No database required.",
       "categories": ["storage", "browser"],
-      "registryDependencies": ["coderabbit-types", "coderabbit-storage-adapter"],
+      "registryDependencies": [
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-types.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-storage-adapter.json"
+      ],
       "files": [
         {
           "path": "registry/default/lib/storage-localstorage.ts",
@@ -75,7 +82,10 @@
       "description": "Convex database adapter with real-time sync and auth support. Includes schema definitions for the reports table.",
       "categories": ["storage", "database", "real-time"],
       "dependencies": ["convex"],
-      "registryDependencies": ["coderabbit-types", "coderabbit-storage-adapter"],
+      "registryDependencies": [
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-types.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-storage-adapter.json"
+      ],
       "files": [
         {
           "path": "registry/default/lib/storage-convex.ts",
@@ -97,7 +107,10 @@
       "description": "Supabase (PostgreSQL) adapter with Row Level Security support. Includes SQL schema and RLS policies.",
       "categories": ["storage", "database"],
       "dependencies": ["@supabase/supabase-js"],
-      "registryDependencies": ["coderabbit-types", "coderabbit-storage-adapter"],
+      "registryDependencies": [
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-types.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-storage-adapter.json"
+      ],
       "files": [
         {
           "path": "registry/default/lib/storage-supabase.ts",
@@ -114,7 +127,10 @@
       "description": "PostgreSQL adapter with connection pooling. Works with Neon, Vercel Postgres, Railway, AWS RDS, Google Cloud SQL, etc.",
       "categories": ["storage", "database"],
       "dependencies": ["pg", "@types/pg"],
-      "registryDependencies": ["coderabbit-types", "coderabbit-storage-adapter"],
+      "registryDependencies": [
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-types.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-storage-adapter.json"
+      ],
       "files": [
         {
           "path": "registry/default/lib/storage-postgres.ts",
@@ -131,7 +147,10 @@
       "description": "MySQL/MariaDB adapter with connection pooling. Works with PlanetScale, AWS RDS, Google Cloud SQL, Azure, etc.",
       "categories": ["storage", "database"],
       "dependencies": ["mysql2", "@types/mysql2"],
-      "registryDependencies": ["coderabbit-types", "coderabbit-storage-adapter"],
+      "registryDependencies": [
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-types.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-storage-adapter.json"
+      ],
       "files": [
         {
           "path": "registry/default/lib/storage-mysql.ts",
@@ -147,7 +166,10 @@
       "title": "CodeRabbit Server Actions",
       "description": "Next.js server actions for CodeRabbit API. Handles API calls server-side where CODERABBIT_API_KEY is securely available.",
       "categories": ["nextjs", "server-actions"],
-      "registryDependencies": ["coderabbit-types", "coderabbit-client"],
+      "registryDependencies": [
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-types.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-client.json"
+      ],
       "files": [
         {
           "path": "registry/default/lib/actions.ts",
@@ -165,10 +187,10 @@
       "categories": ["hooks", "react"],
       "dependencies": ["react"],
       "registryDependencies": [
-        "coderabbit-types",
-        "coderabbit-client",
-        "coderabbit-storage-adapter",
-        "coderabbit-actions"
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-types.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-client.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-storage-adapter.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-actions.json"
       ],
       "files": [
         {
@@ -191,7 +213,7 @@
         "label",
         "select",
         "textarea",
-        "coderabbit-types"
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-types.json"
       ],
       "files": [
         {
@@ -247,7 +269,8 @@
         "button",
         "badge",
         "card",
-        "coderabbit-branding"
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-types.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-branding.json"
       ],
       "files": [
         {
@@ -270,14 +293,14 @@
         "label",
         "select",
         "textarea",
-        "coderabbit-types",
-        "coderabbit-client",
-        "coderabbit-storage-adapter",
-        "coderabbit-storage-localstorage",
-        "coderabbit-react",
-        "coderabbit-report-form",
-        "coderabbit-branding",
-        "coderabbit-report-card"
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-types.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-client.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-storage-adapter.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-storage-localstorage.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-react.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-report-form.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-branding.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-report-card.json"
       ],
       "envVars": {
         "CODERABBIT_API_KEY": ""
@@ -298,14 +321,14 @@
         "label",
         "select",
         "textarea",
-        "coderabbit-types",
-        "coderabbit-client",
-        "coderabbit-storage-adapter",
-        "coderabbit-storage-convex",
-        "coderabbit-react",
-        "coderabbit-report-form",
-        "coderabbit-branding",
-        "coderabbit-report-card"
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-types.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-client.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-storage-adapter.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-storage-convex.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-react.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-report-form.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-branding.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-report-card.json"
       ],
       "envVars": {
         "CODERABBIT_API_KEY": "",
@@ -328,14 +351,14 @@
         "label",
         "select",
         "textarea",
-        "coderabbit-types",
-        "coderabbit-client",
-        "coderabbit-storage-adapter",
-        "coderabbit-storage-supabase",
-        "coderabbit-react",
-        "coderabbit-report-form",
-        "coderabbit-branding",
-        "coderabbit-report-card"
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-types.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-client.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-storage-adapter.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-storage-supabase.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-react.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-report-form.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-branding.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-report-card.json"
       ],
       "envVars": {
         "CODERABBIT_API_KEY": "",
@@ -358,14 +381,14 @@
         "label",
         "select",
         "textarea",
-        "coderabbit-types",
-        "coderabbit-client",
-        "coderabbit-storage-adapter",
-        "coderabbit-storage-postgres",
-        "coderabbit-react",
-        "coderabbit-report-form",
-        "coderabbit-branding",
-        "coderabbit-report-card"
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-types.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-client.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-storage-adapter.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-storage-postgres.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-react.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-report-form.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-branding.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-report-card.json"
       ],
       "envVars": {
         "CODERABBIT_API_KEY": "",
@@ -391,14 +414,14 @@
         "label",
         "select",
         "textarea",
-        "coderabbit-types",
-        "coderabbit-client",
-        "coderabbit-storage-adapter",
-        "coderabbit-storage-mysql",
-        "coderabbit-react",
-        "coderabbit-report-form",
-        "coderabbit-branding",
-        "coderabbit-report-card"
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-types.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-client.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-storage-adapter.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-storage-mysql.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-react.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-report-form.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-branding.json",
+        "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-report-card.json"
       ],
       "envVars": {
         "CODERABBIT_API_KEY": "",

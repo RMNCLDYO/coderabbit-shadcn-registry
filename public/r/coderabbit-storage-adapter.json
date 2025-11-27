@@ -6,7 +6,7 @@
   "author": "Ray <hi@rmncldyo.com>",
   "description": "TypeScript interface for implementing custom storage backends. Implement this to add support for any database.",
   "registryDependencies": [
-    "coderabbit-types"
+    "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-types.json"
   ],
   "files": [
     {
