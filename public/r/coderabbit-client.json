@@ -6,7 +6,7 @@
   "author": "Ray <hi@rmncldyo.com>",
   "description": "Framework-agnostic CodeRabbit API client. Works in Node.js, Deno, Bun, Edge runtimes, and browsers. Single endpoint for generating developer activity reports with 10-minute timeout support.",
   "registryDependencies": [
-    "coderabbit-types"
+    "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-types.json"
   ],
   "files": [
     {

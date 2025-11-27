@@ -6,8 +6,8 @@
   "author": "Ray <hi@rmncldyo.com>",
   "description": "Next.js server actions for CodeRabbit API. Handles API calls server-side where CODERABBIT_API_KEY is securely available.",
   "registryDependencies": [
-    "coderabbit-types",
-    "coderabbit-client"
+    "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-types.json",
+    "https://raw.githubusercontent.com/RMNCLDYO/coderabbit-shadcn-registry/main/public/r/coderabbit-client.json"
   ],
   "files": [
     {
